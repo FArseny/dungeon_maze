@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="static/styles/menu.css">
+    <link rel="stylesheet" href="static/styles/dungeon.css">
+    <link rel="stylesheet" href="static/styles/scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</head>
+
+<body>
+
+    <div id="app" class="vue-app">
+
+        <dungeon-menu v-if="state == 'MAIN_MENU'"
+                      :popup_text="popupText"
+                      @gamefound="gameFoundHandler"></dungeon-menu>
+
+        <dungeon-field v-if="state == 'GAME_READY'"
+                       :game_settings="gameSettings"
+                       :rm="requestManager"
+                       @gameerror="gameErrHandler" @backtomenu="backToMenuHandler"></dungeon-field>
+
+    </div>
+    
+    <script src="static/js/request_manager.js"></script>
+    <script src="static/js/action_manager.js"></script>
+    <script src="static/js/scroll.js"></script>
+    <script src="static/js/game.js"></script>
+    <script src="static/js/dungeon_menu.js"></script>
+    <script src="static/js/dungeon_field.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

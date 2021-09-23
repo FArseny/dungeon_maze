@@ -1,0 +1,139 @@
+.dungeon-field-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.dungeon-field-panel-left {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    width: 230px;
+}
+
+.dungeon-field-panel-left
+.scroll-wrapper {
+    margin-bottom: 30px;
+}
+
+.popup-content-countdown {
+    font-size: 32px;
+    text-align: center;
+    width: 235px;
+}
+
+.dungeon-field-canvas-wrapper {
+    position: relative;
+}
+
+#dungeon_floor_canvas {
+    position: absolute;
+    z-index: 1;
+}
+
+#dungeon_fence_canvas {
+    position: absolute;
+    z-index: 2;
+}
+
+#dungeon_main_canvas {
+    position: absolute;
+    z-index: 3;
+}
+
+.cooldown-line {
+    border: 1px solid black;
+    height: 25px;
+    position: relative;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.bat-cooldown::before {
+    background: url(../img/bat.svg);
+    background-size: contain;
+    content: ' ';
+    display: block;
+    height: 25px;
+    left: -35px;
+    position: relative;
+    top: 0px;
+    width: 25px;
+}
+
+.torch-cooldown::before {
+    background: url(../img/torch.svg);
+    background-size: contain;
+    content: ' ';
+    display: block;
+    height: 25px;
+    left: -35px;
+    position: relative;
+    top: 0px;
+    width: 25px;
+}
+
+.conclusion-text {
+    align-self: center;
+    font-size: 28px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.text-winner {
+    color: #09c509;
+}
+
+.text-looser {
+    color: #d41414;
+}
+
+.back-menu-button {
+    align-self: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 28px;
+    margin-top: 30px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.back-menu-button:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    top: 1px;
+    left: 1px;
+}
+
+.gold-checkbox {
+    padding-right: 35px;
+    position: relative;
+}
+
+.gold-checkbox::before {
+    background: url(../img/cancel.svg);
+    background-size: contain;
+    content: ' ';
+    display: block;
+    height: 25px;
+    right: 0px;
+    position: absolute;
+    top: 6px;
+    width: 25px;
+}
+
+.gold-checkbox-chosen::before {
+    background: url(../img/checkbox.svg);
+    background-size: contain;
+}
+
+
+
+/* .lock_close {
+    cursor: url("./img/lock_close.png"), auto;
+} */
+
+/* .lock_open {
+    cursor: url("./img/lock_open.png"), auto;
+} */
