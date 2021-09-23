@@ -1,5 +1,17 @@
-# dungeon_maze
+## run project
 
+`git clone git@github.com:FArseny/dungeon_maze.git`
+
+`cd dungeon_maze`
+
+`pipenv shell`
+
+`pipenv install -r requirements.txt`
+
+`python3 server.py`
+
+
+## description
 `server.py` - запуск + роутер
 
 `game_manager.py` - логика для поиска игры
